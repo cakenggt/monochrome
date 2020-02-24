@@ -1,0 +1,28 @@
+{
+    "name": "monochrome",
+    "displayName": "Monochrome",
+    "description": "Monochrome theme",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "scripts": {
+        "watch": "npx yaml2json themes --save -p -w",
+        "build": "npx yaml2json themes --save -p"
+    },
+    "contributes": {
+        "themes": [
+            {
+                "label": "Monochrome",
+                "uiTheme": "vs",
+                "path": "./themes/Monochrome-color-theme.json"
+            }
+        ]
+    },
+    "dependencies": {
+        "yamljs": "^0.3.0"
+    }
+}
