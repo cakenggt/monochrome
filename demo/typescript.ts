@@ -19,7 +19,7 @@ export const test = (b: number): React.Component => {
   try {
 
   } catch (e) {
-    
+    throw new Error();
   }
   a.toString();
   return new App();

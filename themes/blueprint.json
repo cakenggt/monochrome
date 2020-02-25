@@ -20,7 +20,8 @@
         "meta.tag",
         "punctuation.definition.tag.html",
         "punctuation.definition.tag.begin.html",
-        "punctuation.definition.tag.end.html"
+        "punctuation.definition.tag.end.html",
+        "meta.function-call.arguments"
       ],
       "settings": {
         "fontStyle": ""
@@ -36,6 +37,7 @@
         "comment.block.documentation",
         "string.quoted.docstring",
         "keyword.control.conditional",
+        "keyword.control.trycatch",
         "support",
         "storage.type",
         "constant.language",
@@ -43,7 +45,8 @@
         "variable.parameter.function.language.special",
         "string",
         "meta.tag entity.other.attribute-name",
-        "entity.other.attribute - name.html"
+        "entity.other.attribute - name.html",
+        "keyword.control.from"
       ],
       "settings": {
         "fontStyle": "italic"
@@ -54,12 +57,15 @@
       "scope": [
         "support.function",
         "entity.name.function",
+        "meta.function-call",
         "entity.name.type",
         "entity.other.inherited-class",
         "punctuation.accessor",
         "entity.name.tag",
         "support.class.component.tsx",
-        "support.class.component.jsx"
+        "support.class.component.jsx",
+        "keyword.operator.arithmetic",
+        "keyword.control.import"
       ],
       "settings": {
         "fontStyle": "bold"

@@ -28,6 +28,7 @@ const totalJSON = {
         "punctuation.definition.tag.html", // HTML Tags
         "punctuation.definition.tag.begin.html", // HTML Tags
         "punctuation.definition.tag.end.html", // HTML Tags
+        "meta.function-call.arguments",
       ],
       settings: { fontStyle: "" },
     },
@@ -41,6 +42,7 @@ const totalJSON = {
         "comment.block.documentation",
         "string.quoted.docstring",
         "keyword.control.conditional",
+        "keyword.control.trycatch",
         "support",
         "storage.type",
         "constant.language",
@@ -49,6 +51,7 @@ const totalJSON = {
         "string",
         "meta.tag entity.other.attribute-name",
         "entity.other.attribute - name.html",
+        "keyword.control.from",
       ],
       settings: { fontStyle: "italic" },
     },
@@ -57,12 +60,15 @@ const totalJSON = {
       scope: [
         "support.function",
         "entity.name.function",
+        "meta.function-call",
         "entity.name.type",
         "entity.other.inherited-class",
         "punctuation.accessor",
         "entity.name.tag",
         "support.class.component.tsx",
         "support.class.component.jsx",
+        "keyword.operator.arithmetic",
+        "keyword.control.import",
       ],
       settings: { fontStyle: "bold" },
     },
