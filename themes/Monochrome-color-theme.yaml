@@ -1,4 +1,4 @@
-name: Monochrome
+name: Paper
 type: light
 customColors:
   black: &black "#0A0A0A"

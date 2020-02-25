@@ -16,7 +16,7 @@
     "contributes": {
         "themes": [
             {
-                "label": "Monochrome",
+                "label": "Paper",
                 "uiTheme": "vs",
                 "path": "./themes/Monochrome-color-theme.json"
             }
