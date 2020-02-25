@@ -9,20 +9,28 @@
     "categories": [
         "Themes"
     ],
+    "watch": {
+        "build": "script.js"
+    },
     "scripts": {
-        "watch": "npx yaml2json themes --save -p -w",
-        "build": "npx yaml2json themes --save -p"
+        "watch": "npx npm-watch",
+        "build": "node script.js"
     },
     "contributes": {
         "themes": [
             {
                 "label": "Paper",
                 "uiTheme": "vs",
-                "path": "./themes/Monochrome-color-theme.json"
+                "path": "./themes/paper.json"
+            },
+            {
+                "label": "Blueprint",
+                "uiTheme": "vs-dark",
+                "path": "./themes/blueprint.json"
             }
         ]
     },
     "dependencies": {
-        "yamljs": "^0.3.0"
+        "npm-watch": "^0.6.0"
     }
 }

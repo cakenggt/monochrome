@@ -214,8 +214,7 @@
         "constant"
       ],
       "settings": {
-        "fontStyle": "none",
-        "foreground": "#0A0A0A"
+        "fontStyle": "none"
       }
     },
     {
