@@ -46,7 +46,9 @@
         "string",
         "meta.tag entity.other.attribute-name",
         "entity.other.attribute - name.html",
-        "keyword.control.from"
+        "keyword.control.from",
+        "markup.italic",
+        "punctuation.definition.italic"
       ],
       "settings": {
         "fontStyle": "italic"
@@ -65,7 +67,9 @@
         "support.class.component.tsx",
         "support.class.component.jsx",
         "keyword.operator.arithmetic",
-        "keyword.control.import"
+        "keyword.control.import",
+        "markup.bold",
+        "punctuation.definition.bold"
       ],
       "settings": {
         "fontStyle": "bold"
@@ -74,10 +78,22 @@
     {
       "name": "Underline",
       "scope": [
-        "keyword.control.flow"
+        "keyword.control.flow",
+        "markup.underline",
+        "punctuation.definition.underline"
       ],
       "settings": {
         "fontStyle": "underline"
+      }
+    },
+    {
+      "name": "Bold Underline",
+      "scope": [
+        "markup.heading",
+        "punctuation.definition.heading"
+      ],
+      "settings": {
+        "fontStyle": "bold underline"
       }
     }
   ]

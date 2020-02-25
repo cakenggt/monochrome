@@ -52,6 +52,8 @@ const totalJSON = {
         "meta.tag entity.other.attribute-name",
         "entity.other.attribute - name.html",
         "keyword.control.from",
+        "markup.italic",
+        "punctuation.definition.italic"
       ],
       settings: { fontStyle: "italic" },
     },
@@ -69,13 +71,24 @@ const totalJSON = {
         "support.class.component.jsx",
         "keyword.operator.arithmetic",
         "keyword.control.import",
+        "markup.bold",
+        "punctuation.definition.bold",
       ],
       settings: { fontStyle: "bold" },
     },
     {
       name: "Underline",
-      scope: ["keyword.control.flow"],
+      scope: [
+        "keyword.control.flow",
+        "markup.underline",
+        "punctuation.definition.underline",
+      ],
       settings: { fontStyle: "underline" },
+    },
+    {
+      name: "Bold Underline",
+      scope: ["markup.heading", "punctuation.definition.heading"],
+      settings: { fontStyle: "bold underline" },
     },
   ],
 };

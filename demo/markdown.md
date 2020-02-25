@@ -13,3 +13,5 @@
 5. Click **Install** to install it
 6. Click **Reload** to reload the Code
 7. File > Preferences > Color Theme > **Cobalt2**
+8. Here is *italic*
+9. Here is __underline__
