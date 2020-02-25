@@ -13,3 +13,5 @@ export class App extends React.Component {
     );
   }
 }
+
+export const AppContainer = () => <App/>

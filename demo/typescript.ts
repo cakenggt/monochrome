@@ -1,17 +1,21 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import * as React from 'react';
+import { App } from './react';
 
-import { AppComponent } from './app.component';
-
-@NgModule({
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
-  declarations: [
-    AppComponent
-  ],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+/**
+ * Here is the docstring.
+ * @param b Here is a parameter
+ */
+export const test = (b: number): React.Component => {
+  const a: number = 5;
+  test(b);
+  // Look, a comment!
+  console.log(a + b);
+  console.log([1,2,3,4].map(a => a+1).reduce((curr, acc) => curr+acc))
+  console.log(`This is a test: ${a + 5}`);
+  console.log(`what is this? ${this['test number'] + 4}`);
+  if (a) {
+    console.log('a');
+  } else {}
+  a.toString();
+  return new App();
+}

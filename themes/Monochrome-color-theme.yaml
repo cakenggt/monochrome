@@ -2,43 +2,34 @@ name: Monochrome
 type: light
 customColors:
   black: &black "#0A0A0A"
-  gray: &gray "#AAAAAA"
 customStyles:
-  regularGray: &regularGray
-    foreground: *gray
   regularBlack: &regularBlack
     foreground: *black
-  italicGray: &italicGray
-    fontStyle: italic
-    foreground: *gray
-  italicUnderlineGray: &italicUnderlineGray
-    fontStyle: italic underline
-    foreground: *gray
   italicBlack: &italicBlack
     fontStyle: italic
     foreground: *black
-  boldGray: &boldGray
-    fontStyle: bold
-    foreground: *gray
   boldBlack: &boldBlack
     fontStyle: bold
+    foreground: *black
+  underlineBlack: &underlineBlack
+    fontStyle: underline
     foreground: *black
   boldItalicBlack: &boldItalicBlack
     fontStyle: bold italic
     foreground: *black
-  underlineGray: &underlineGray
-    fontStyle: underline
-    foreground: *gray
+  italicUnderlineBlack: &italicUnderlineBlack
+    fontStyle: italic underline
+    foreground: *black
 colors:
   editor.background: "#f5f5f5"
-  editor.foreground: *gray
+  editor.foreground: *black
 tokenColors:
   - name: Comments
     scope: [comment, punctuation.definition.comment]
-    settings: *italicGray
+    settings: *italicBlack
   - name: "Comments: Preprocessor"
     scope: comment.block.preprocessor
-    settings: *italicGray
+    settings: *italicBlack
   - name: "Comments: Documentation"
     scope:
       [
@@ -50,27 +41,45 @@ tokenColors:
   - name: "Invalid - Illegal"
     scope: invalid.illegal
     settings: { foreground: "#660000" }
-  - name: Operators
-    scope: keyword.operator
-    settings: { foreground: "#777777" }
   - name: Keywords
     scope: [keyword, storage]
     settings: *regularBlack
-  - name: Types
-    scope: [storage.type, support.type]
-    settings: *regularBlack
-  - name: "Language Constants"
-    scope: [constant.language, support.constant, variable.language]
+  - name: Operators
+    scope: keyword.operator
+    settings: *italicBlack
+  - name: Arithmetic
+    scope: keyword.operator.arithmetic
     settings: *boldBlack
+  - name: Return Statements
+    scope: keyword.control.flow
+    settings: *underlineBlack
+  - name: Conditional
+    scope: keyword.control.conditional
+    settings: *italicBlack
+  - name: Support
+    scope: support
+    settings: *italicBlack
+  - name: Support Function
+    scope: support.function
+    settings: *boldBlack
+  - name: Types
+    scope: storage.type
+    settings: *italicBlack
+  - name: "Language Constants"
+    scope: [constant.language, variable.language]
+    settings: *italicBlack
+  - name: "Special Parameters in Functions"
+    scope: variable.parameter.function.language.special
+    settings: *italicBlack
   - name: Variables
-    scope: [variable, support.variable]
-    settings: *italicGray
+    scope: variable
+    settings: *regularBlack
   - name: Functions
-    scope: [entity.name.function, support.function]
+    scope: entity.name.function
     settings: *boldBlack
   - name: Classes
-    scope: [entity.name.type, entity.other.inherited-class, support.class]
-    settings: *underlineGray
+    scope: [entity.name.type, entity.other.inherited-class]
+    settings: *boldBlack
   - name: Exceptions
     scope: entity.name.exception
     settings: { foreground: "#660000" }
@@ -82,7 +91,7 @@ tokenColors:
     settings: { foreground: "#AB6526" }
   - name: Strings
     scope: string
-    settings: *italicUnderlineGray
+    settings: *italicUnderlineBlack
   - name: "Strings: Escape Sequences"
     scope: constant.character.escape
     settings: { foreground: "#777777" }
@@ -94,7 +103,7 @@ tokenColors:
     settings: { foreground: "#AB6526" }
   - name: Punctuation
     scope: punctuation
-    settings: *regularGray
+    settings: *boldBlack
   - name: "HTML: Doctype Declaration"
     scope:
       [

@@ -3,6 +3,10 @@
 
 class A:
     def __init__(self, a):
+        """
+        This is the docstring
+        """
+        # This is a comment
         self.a = a
 
 from flask import Flask, jsonify, make_response, request

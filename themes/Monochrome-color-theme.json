@@ -2,48 +2,36 @@
   "name": "Monochrome",
   "type": "light",
   "customColors": {
-    "black": "#0A0A0A",
-    "gray": "#AAAAAA"
+    "black": "#0A0A0A"
   },
   "customStyles": {
-    "regularGray": {
-      "foreground": "#AAAAAA"
-    },
     "regularBlack": {
       "foreground": "#0A0A0A"
-    },
-    "italicGray": {
-      "fontStyle": "italic",
-      "foreground": "#AAAAAA"
-    },
-    "italicUnderlineGray": {
-      "fontStyle": "italic underline",
-      "foreground": "#AAAAAA"
     },
     "italicBlack": {
       "fontStyle": "italic",
       "foreground": "#0A0A0A"
     },
-    "boldGray": {
-      "fontStyle": "bold",
-      "foreground": "#AAAAAA"
-    },
     "boldBlack": {
       "fontStyle": "bold",
+      "foreground": "#0A0A0A"
+    },
+    "underlineBlack": {
+      "fontStyle": "underline",
       "foreground": "#0A0A0A"
     },
     "boldItalicBlack": {
       "fontStyle": "bold italic",
       "foreground": "#0A0A0A"
     },
-    "underlineGray": {
-      "fontStyle": "underline",
-      "foreground": "#AAAAAA"
+    "italicUnderlineBlack": {
+      "fontStyle": "italic underline",
+      "foreground": "#0A0A0A"
     }
   },
   "colors": {
     "editor.background": "#f5f5f5",
-    "editor.foreground": "#AAAAAA"
+    "editor.foreground": "#0A0A0A"
   },
   "tokenColors": [
     {
@@ -54,7 +42,7 @@
       ],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#AAAAAA"
+        "foreground": "#0A0A0A"
       }
     },
     {
@@ -62,7 +50,7 @@
       "scope": "comment.block.preprocessor",
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#AAAAAA"
+        "foreground": "#0A0A0A"
       }
     },
     {
@@ -85,13 +73,6 @@
       }
     },
     {
-      "name": "Operators",
-      "scope": "keyword.operator",
-      "settings": {
-        "foreground": "#777777"
-      }
-    },
-    {
       "name": "Keywords",
       "scope": [
         "keyword",
@@ -102,12 +83,58 @@
       }
     },
     {
-      "name": "Types",
-      "scope": [
-        "storage.type",
-        "support.type"
-      ],
+      "name": "Operators",
+      "scope": "keyword.operator",
       "settings": {
+        "fontStyle": "italic",
+        "foreground": "#0A0A0A"
+      }
+    },
+    {
+      "name": "Arithmetic",
+      "scope": "keyword.operator.arithmetic",
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#0A0A0A"
+      }
+    },
+    {
+      "name": "Return Statements",
+      "scope": "keyword.control.flow",
+      "settings": {
+        "fontStyle": "underline",
+        "foreground": "#0A0A0A"
+      }
+    },
+    {
+      "name": "Conditional",
+      "scope": "keyword.control.conditional",
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#0A0A0A"
+      }
+    },
+    {
+      "name": "Support",
+      "scope": "support",
+      "settings": {
+        "fontStyle": "italic",
+        "foreground": "#0A0A0A"
+      }
+    },
+    {
+      "name": "Support Function",
+      "scope": "support.function",
+      "settings": {
+        "fontStyle": "bold",
+        "foreground": "#0A0A0A"
+      }
+    },
+    {
+      "name": "Types",
+      "scope": "storage.type",
+      "settings": {
+        "fontStyle": "italic",
         "foreground": "#0A0A0A"
       }
     },
@@ -115,31 +142,31 @@
       "name": "Language Constants",
       "scope": [
         "constant.language",
-        "support.constant",
         "variable.language"
       ],
       "settings": {
-        "fontStyle": "bold",
+        "fontStyle": "italic",
+        "foreground": "#0A0A0A"
+      }
+    },
+    {
+      "name": "Special Parameters in Functions",
+      "scope": "variable.parameter.function.language.special",
+      "settings": {
+        "fontStyle": "italic",
         "foreground": "#0A0A0A"
       }
     },
     {
       "name": "Variables",
-      "scope": [
-        "variable",
-        "support.variable"
-      ],
+      "scope": "variable",
       "settings": {
-        "fontStyle": "italic",
-        "foreground": "#AAAAAA"
+        "foreground": "#0A0A0A"
       }
     },
     {
       "name": "Functions",
-      "scope": [
-        "entity.name.function",
-        "support.function"
-      ],
+      "scope": "entity.name.function",
       "settings": {
         "fontStyle": "bold",
         "foreground": "#0A0A0A"
@@ -149,12 +176,11 @@
       "name": "Classes",
       "scope": [
         "entity.name.type",
-        "entity.other.inherited-class",
-        "support.class"
+        "entity.other.inherited-class"
       ],
       "settings": {
-        "fontStyle": "underline",
-        "foreground": "#AAAAAA"
+        "fontStyle": "bold",
+        "foreground": "#0A0A0A"
       }
     },
     {
@@ -187,7 +213,7 @@
       "scope": "string",
       "settings": {
         "fontStyle": "italic underline",
-        "foreground": "#AAAAAA"
+        "foreground": "#0A0A0A"
       }
     },
     {
@@ -215,7 +241,8 @@
       "name": "Punctuation",
       "scope": "punctuation",
       "settings": {
-        "foreground": "#AAAAAA"
+        "fontStyle": "bold",
+        "foreground": "#0A0A0A"
       }
     },
     {

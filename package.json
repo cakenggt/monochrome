@@ -1,7 +1,7 @@
 {
-    "name": "monochrome",
-    "displayName": "Monochrome",
-    "description": "Monochrome theme",
+    "name": "paper",
+    "displayName": "Paper",
+    "description": "A VSCode theme fit to print on paper.",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.42.0"
