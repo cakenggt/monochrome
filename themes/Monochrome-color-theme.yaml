@@ -4,6 +4,7 @@ customColors:
   black: &black "#0A0A0A"
 customStyles:
   regularBlack: &regularBlack
+    fontStyle: none
     foreground: *black
   italicBlack: &italicBlack
     fontStyle: italic
@@ -91,7 +92,10 @@ tokenColors:
     settings: { foreground: "#AB6526" }
   - name: Strings
     scope: string
-    settings: *italicUnderlineBlack
+    settings: *italicBlack
+  - name: Template Expression
+    scope: meta.template.expression
+    settings: *regularBlack
   - name: "Strings: Escape Sequences"
     scope: constant.character.escape
     settings: { foreground: "#777777" }
@@ -123,12 +127,12 @@ tokenColors:
       ]
     settings: { foreground: "#91B3E0" }
   - name: "HTML: Tag Names"
-    scope: entity.name.tag
-    settings: { foreground: "#4B83CD" }
+    scope: [entity.name.tag, support.class.component.tsx, support.class.component.jsx]
+    settings: *boldBlack
   - name: "HTML: Attribute Names"
     scope:
       ["meta.tag entity.other.attribute-name", entity.other.attribute-name.html]
-    settings: { fontStyle: italic, foreground: "#91B3E0" }
+    settings: *italicBlack
   - name: "HTML: Entities"
     scope: [constant.character.entity, punctuation.definition.entity]
     settings: { foreground: "#AB6526" }

@@ -4,8 +4,9 @@ export class App extends React.Component {
   public foo: string = "Hello world";
 
   public render() {
+    const className = 'class';
     return (
-      <div className="App">
+      <div className={className}>
         <header className="App-header">
           <h1 className="App-title">{this.foo}</h1>
         </header>

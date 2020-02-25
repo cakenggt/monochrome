@@ -6,6 +6,7 @@
   },
   "customStyles": {
     "regularBlack": {
+      "fontStyle": "none",
       "foreground": "#0A0A0A"
     },
     "italicBlack": {
@@ -79,6 +80,7 @@
         "storage"
       ],
       "settings": {
+        "fontStyle": "none",
         "foreground": "#0A0A0A"
       }
     },
@@ -161,6 +163,7 @@
       "name": "Variables",
       "scope": "variable",
       "settings": {
+        "fontStyle": "none",
         "foreground": "#0A0A0A"
       }
     },
@@ -212,7 +215,15 @@
       "name": "Strings",
       "scope": "string",
       "settings": {
-        "fontStyle": "italic underline",
+        "fontStyle": "italic",
+        "foreground": "#0A0A0A"
+      }
+    },
+    {
+      "name": "Template Expression",
+      "scope": "meta.template.expression",
+      "settings": {
+        "fontStyle": "none",
         "foreground": "#0A0A0A"
       }
     },
@@ -271,9 +282,14 @@
     },
     {
       "name": "HTML: Tag Names",
-      "scope": "entity.name.tag",
+      "scope": [
+        "entity.name.tag",
+        "support.class.component.tsx",
+        "support.class.component.jsx"
+      ],
       "settings": {
-        "foreground": "#4B83CD"
+        "fontStyle": "bold",
+        "foreground": "#0A0A0A"
       }
     },
     {
@@ -284,7 +300,7 @@
       ],
       "settings": {
         "fontStyle": "italic",
-        "foreground": "#91B3E0"
+        "foreground": "#0A0A0A"
       }
     },
     {
