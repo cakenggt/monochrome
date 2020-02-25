@@ -2,6 +2,8 @@ name: Paper
 type: light
 customColors:
   black: &black "#0A0A0A"
+  blue: &blue "#040080"
+  white: &white "#FFFFFF"
 customStyles:
   regularBlack: &regularBlack
     fontStyle: none
@@ -18,11 +20,14 @@ customStyles:
   boldItalicBlack: &boldItalicBlack
     fontStyle: bold italic
     foreground: *black
+  boldUnderlineBlack: &boldUnderlineBlack
+    fontStyle: bold underline
+    foreground: *black
   italicUnderlineBlack: &italicUnderlineBlack
     fontStyle: italic underline
     foreground: *black
 colors:
-  editor.background: "#f5f5f5"
+  editor.background: *white
   editor.foreground: *black
 tokenColors:
   - name: Comments
@@ -105,6 +110,9 @@ tokenColors:
   - name: "Strings: Symbols"
     scope: constant.other.symbol
     settings: { foreground: "#AB6526" }
+  - name: Punctuation
+    scope: punctuation
+    settings: *regularBlack
   - name: Punctuation Accessor
     scope: punctuation.accessor
     settings: *boldBlack

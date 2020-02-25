@@ -2,7 +2,9 @@
   "name": "Paper",
   "type": "light",
   "customColors": {
-    "black": "#0A0A0A"
+    "black": "#0A0A0A",
+    "blue": "#040080",
+    "white": "#FFFFFF"
   },
   "customStyles": {
     "regularBlack": {
@@ -25,13 +27,17 @@
       "fontStyle": "bold italic",
       "foreground": "#0A0A0A"
     },
+    "boldUnderlineBlack": {
+      "fontStyle": "bold underline",
+      "foreground": "#0A0A0A"
+    },
     "italicUnderlineBlack": {
       "fontStyle": "italic underline",
       "foreground": "#0A0A0A"
     }
   },
   "colors": {
-    "editor.background": "#f5f5f5",
+    "editor.background": "#FFFFFF",
     "editor.foreground": "#0A0A0A"
   },
   "tokenColors": [
@@ -247,6 +253,14 @@
       "scope": "constant.other.symbol",
       "settings": {
         "foreground": "#AB6526"
+      }
+    },
+    {
+      "name": "Punctuation",
+      "scope": "punctuation",
+      "settings": {
+        "fontStyle": "none",
+        "foreground": "#0A0A0A"
       }
     },
     {
