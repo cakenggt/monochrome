@@ -38,7 +38,7 @@ tokenColors:
         comment.block.documentation,
         string.quoted.docstring,
       ]
-    settings: *boldItalicBlack
+    settings: *italicBlack
   - name: "Invalid - Illegal"
     scope: invalid.illegal
     settings: { foreground: "#660000" }
@@ -47,10 +47,7 @@ tokenColors:
     settings: *regularBlack
   - name: Operators
     scope: keyword.operator
-    settings: *italicBlack
-  - name: Arithmetic
-    scope: keyword.operator.arithmetic
-    settings: *boldBlack
+    settings: *regularBlack
   - name: Return Statements
     scope: keyword.control.flow
     settings: *underlineBlack
@@ -78,6 +75,9 @@ tokenColors:
   - name: Functions
     scope: entity.name.function
     settings: *boldBlack
+  - name: Arrow Function Arrows
+    scope: storage.type.function.arrow
+    settings: *regularBlack
   - name: Classes
     scope: [entity.name.type, entity.other.inherited-class]
     settings: *boldBlack
@@ -89,7 +89,7 @@ tokenColors:
     settings: { fontStyle: bold }
   - name: "Numbers, Characters"
     scope: [constant.numeric, constant.character, constant]
-    settings: { foreground: "#AB6526" }
+    settings: *regularBlack
   - name: Strings
     scope: string
     settings: *italicBlack
@@ -105,8 +105,8 @@ tokenColors:
   - name: "Strings: Symbols"
     scope: constant.other.symbol
     settings: { foreground: "#AB6526" }
-  - name: Punctuation
-    scope: punctuation
+  - name: Punctuation Accessor
+    scope: punctuation.accessor
     settings: *boldBlack
   - name: "HTML: Doctype Declaration"
     scope:
@@ -125,7 +125,7 @@ tokenColors:
         punctuation.definition.tag.begin.html,
         punctuation.definition.tag.end.html,
       ]
-    settings: { foreground: "#91B3E0" }
+    settings: *regularBlack
   - name: "HTML: Tag Names"
     scope: [entity.name.tag, support.class.component.tsx, support.class.component.jsx]
     settings: *boldBlack

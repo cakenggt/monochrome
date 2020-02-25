@@ -62,7 +62,7 @@
         "string.quoted.docstring"
       ],
       "settings": {
-        "fontStyle": "bold italic",
+        "fontStyle": "italic",
         "foreground": "#0A0A0A"
       }
     },
@@ -88,15 +88,7 @@
       "name": "Operators",
       "scope": "keyword.operator",
       "settings": {
-        "fontStyle": "italic",
-        "foreground": "#0A0A0A"
-      }
-    },
-    {
-      "name": "Arithmetic",
-      "scope": "keyword.operator.arithmetic",
-      "settings": {
-        "fontStyle": "bold",
+        "fontStyle": "none",
         "foreground": "#0A0A0A"
       }
     },
@@ -176,6 +168,14 @@
       }
     },
     {
+      "name": "Arrow Function Arrows",
+      "scope": "storage.type.function.arrow",
+      "settings": {
+        "fontStyle": "none",
+        "foreground": "#0A0A0A"
+      }
+    },
+    {
       "name": "Classes",
       "scope": [
         "entity.name.type",
@@ -208,7 +208,8 @@
         "constant"
       ],
       "settings": {
-        "foreground": "#AB6526"
+        "fontStyle": "none",
+        "foreground": "#0A0A0A"
       }
     },
     {
@@ -249,8 +250,8 @@
       }
     },
     {
-      "name": "Punctuation",
-      "scope": "punctuation",
+      "name": "Punctuation Accessor",
+      "scope": "punctuation.accessor",
       "settings": {
         "fontStyle": "bold",
         "foreground": "#0A0A0A"
@@ -277,7 +278,8 @@
         "punctuation.definition.tag.end.html"
       ],
       "settings": {
-        "foreground": "#91B3E0"
+        "fontStyle": "none",
+        "foreground": "#0A0A0A"
       }
     },
     {
