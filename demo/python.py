@@ -18,6 +18,10 @@ def welcome(self, a):
     try:
         message = 'Welcome %s!' % content['name']
         response = {'message': message}
+        if True:
+            return True
+        else:
+            return False
         return make_response(jsonify(response), 200)
 
     except Exception as ex:

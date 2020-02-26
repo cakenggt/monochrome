@@ -43,6 +43,7 @@ const totalJSON = {
         "string.quoted.docstring",
         "keyword.control.conditional",
         "keyword.control.trycatch",
+        "keyword.control.switch",
         "support",
         "storage.type",
         "constant.language",
@@ -80,8 +81,6 @@ const totalJSON = {
       name: "Underline",
       scope: [
         "keyword.control.flow",
-        "keyword.control.conditional",
-        "keyword.control.switch",
         "markup.underline",
         "punctuation.definition.underline",
       ],
