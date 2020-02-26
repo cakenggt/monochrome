@@ -14,7 +14,8 @@
     },
     "scripts": {
         "watch": "npx npm-watch",
-        "build": "node script.js"
+        "build": "node script.js",
+        "vscode:prepublish": "node script.js"
     },
     "contributes": {
         "themes": [
@@ -30,7 +31,7 @@
             }
         ]
     },
-    "dependencies": {
+    "devDependencies": {
         "npm-watch": "^0.6.0"
     }
 }

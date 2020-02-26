@@ -80,6 +80,8 @@ const totalJSON = {
       name: "Underline",
       scope: [
         "keyword.control.flow",
+        "keyword.control.conditional",
+        "keyword.control.switch",
         "markup.underline",
         "punctuation.definition.underline",
       ],
