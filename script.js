@@ -29,6 +29,7 @@ const totalJSON = {
         "punctuation.definition.tag.begin.html", // HTML Tags
         "punctuation.definition.tag.end.html", // HTML Tags
         "meta.function-call.arguments",
+        "support.type.property-name", // JSON properties
       ],
       settings: { fontStyle: "" },
     },

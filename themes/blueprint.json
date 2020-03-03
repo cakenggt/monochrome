@@ -21,7 +21,8 @@
         "punctuation.definition.tag.html",
         "punctuation.definition.tag.begin.html",
         "punctuation.definition.tag.end.html",
-        "meta.function-call.arguments"
+        "meta.function-call.arguments",
+        "support.type.property-name"
       ],
       "settings": {
         "fontStyle": ""

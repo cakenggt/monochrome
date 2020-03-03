@@ -19,7 +19,12 @@ export const test = (b: number): React.Component => {
     console.log('a');
   } else {}
   try {
-
+    const c = {
+      a: 'test',
+      "b": {
+        c: test
+      }
+    }
   } catch (e) {
     throw new Error();
   }
