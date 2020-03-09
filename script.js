@@ -45,6 +45,8 @@ const totalJSON = {
       "activityBar.foreground",
       "badge.foreground",
       "activityBarBadge.foreground",
+      "sideBar.border",
+      "activityBar.border",
     ],
     [
       "editorGroup.border",
@@ -54,24 +56,23 @@ const totalJSON = {
     ],
     [],
     [],
-    ["badge.background", "activityBarBadge.background"],
+    [],
     [
       "editorLineNumber.activeForeground",
       "editor.lineHighlightBorder",
       "list.inactiveSelectionBackground",
       "list.activeSelectionForeground",
       "statusBar.background",
+      "activityBarBadge.background",
+      "badge.background",
     ],
-    [
-      "titleBar.activeBackground",
-      "tab.inactiveBackground",
-      "sideBar.background",
-    ],
+    ["titleBar.activeBackground", "tab.inactiveBackground"],
     [
       "editor.background",
       "editorGroupHeader.tabsBackground",
       "tab.border",
       "activityBar.background",
+      "sideBar.background",
     ],
   ],
   tokenColors: [
