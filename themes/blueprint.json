@@ -1,9 +1,32 @@
 {
-  "name": "Blueprint",
-  "type": "dark",
   "colors": {
+    "editor.foreground": "#FEFFE8",
+    "foreground": "#FEFFE8",
+    "tab.activeForeground": "#FEFFE8",
+    "editorLineNumber.activeForeground": "#4B489D",
+    "sideBar.foreground": "#FEFFE8",
+    "list.activeSelectionBackground": "#FEFFE8",
+    "list.inactiveSelectionForeground": "#FEFFE8",
+    "activityBar.foreground": "#FEFFE8",
+    "badge.foreground": "#FEFFE8",
+    "activityBarBadge.foreground": "#FEFFE8",
+    "editorGroup.border": "#DADAD9",
+    "tab.activeBorder": "#DADAD9",
+    "editorLineNumber.foreground": "#DADAD9",
+    "activityBar.inactiveForeground": "#DADAD9",
+    "badge.background": "#6F6DAC",
+    "activityBarBadge.background": "#6F6DAC",
+    "editor.lineHighlightBorder": "#4B489D",
+    "list.inactiveSelectionBackground": "#4B489D",
+    "list.activeSelectionForeground": "#4B489D",
+    "statusBar.background": "#4B489D",
+    "titleBar.activeBackground": "#27248E",
+    "tab.inactiveBackground": "#27248E",
+    "sideBar.background": "#27248E",
     "editor.background": "#040080",
-    "editor.foreground": "#FFFFFF"
+    "editorGroupHeader.tabsBackground": "#040080",
+    "tab.border": "#040080",
+    "activityBar.background": "#040080"
   },
   "tokenColors": [
     {
@@ -98,5 +121,7 @@
         "fontStyle": "bold underline"
       }
     }
-  ]
+  ],
+  "name": "Blueprint",
+  "type": "dark"
 }

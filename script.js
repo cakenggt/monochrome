@@ -4,14 +4,76 @@ const { writeFileSync } = fs;
 const black = "#0A0A0A";
 const blue = "#040080";
 const white = "#FFFFFF";
+const cream = "#FEFFE8";
+
+const HEX_REGEX = /#([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})/;
+
+const generateBlend = (start, stop) => {
+  const result = [];
+  const startArray = start
+    .match(HEX_REGEX)
+    .slice(1, 4)
+    .map(chars => parseInt(chars, 16));
+  const stopArray = stop
+    .match(HEX_REGEX)
+    .slice(1, 4)
+    .map(chars => parseInt(chars, 16));
+  const diff = startArray.map((value, i) => stopArray[i] - value);
+  const BLEND_NUMBER = 8;
+  for (let i = 0; i < BLEND_NUMBER; i++) {
+    const currentColor = startArray
+      .map((value, j) => Math.floor(value + (diff[j] * i) / (BLEND_NUMBER - 1)))
+      .map(value => value.toString(16))
+      .map(value => (value.length < 2 ? `0${value}` : value))
+      .join("");
+    result.push(`#${currentColor.toUpperCase()}`);
+  }
+  return result;
+};
 
 const totalJSON = {
-  name: "Paper",
-  type: "light",
-  colors: {
-    ["editor.background"]: white,
-    ["editor.foreground"]: black,
-  },
+  colors: [
+    // foreground to background list
+    [
+      "editor.foreground",
+      "foreground",
+      "tab.activeForeground",
+      "editorLineNumber.activeForeground",
+      "sideBar.foreground",
+      "list.activeSelectionBackground",
+      "list.inactiveSelectionForeground",
+      "activityBar.foreground",
+      "badge.foreground",
+      "activityBarBadge.foreground",
+    ],
+    [
+      "editorGroup.border",
+      "tab.activeBorder",
+      "editorLineNumber.foreground",
+      "activityBar.inactiveForeground",
+    ],
+    [],
+    [],
+    ["badge.background", "activityBarBadge.background"],
+    [
+      "editorLineNumber.activeForeground",
+      "editor.lineHighlightBorder",
+      "list.inactiveSelectionBackground",
+      "list.activeSelectionForeground",
+      "statusBar.background",
+    ],
+    [
+      "titleBar.activeBackground",
+      "tab.inactiveBackground",
+      "sideBar.background",
+    ],
+    [
+      "editor.background",
+      "editorGroupHeader.tabsBackground",
+      "tab.border",
+      "activityBar.background",
+    ],
+  ],
   tokenColors: [
     {
       name: "Regular",
@@ -55,7 +117,7 @@ const totalJSON = {
         "entity.other.attribute - name.html",
         "keyword.control.from",
         "markup.italic",
-        "punctuation.definition.italic"
+        "punctuation.definition.italic",
       ],
       settings: { fontStyle: "italic" },
     },
@@ -95,14 +157,31 @@ const totalJSON = {
   ],
 };
 
-writeFileSync("./themes/paper.json", JSON.stringify(totalJSON, undefined, 2));
+const createTheme = (name, type, colors) => {
+  const theme = Object.assign({}, totalJSON);
+  theme.name = name;
+  theme.type = type;
+  theme.colors = theme.colors.reduce((acc, selectors, i) => {
+    selectors.forEach(selector => (acc[selector] = colors[i]));
+    return acc;
+  }, {});
+  return theme;
+};
 
-totalJSON.name = "Blueprint";
-totalJSON.type = "dark";
-totalJSON.colors["editor.background"] = blue;
-totalJSON.colors["editor.foreground"] = white;
+writeFileSync(
+  "./themes/paper.json",
+  JSON.stringify(
+    createTheme("Paper", "light", generateBlend(black, white)),
+    undefined,
+    2,
+  ),
+);
 
 writeFileSync(
   "./themes/blueprint.json",
-  JSON.stringify(totalJSON, undefined, 2),
+  JSON.stringify(
+    createTheme("Blueprint", "dark", generateBlend(cream, blue)),
+    undefined,
+    2,
+  ),
 );
