@@ -12,9 +12,10 @@
     "activityBarBadge.foreground": "#0A0A0A",
     "sideBar.border": "#0A0A0A",
     "activityBar.border": "#0A0A0A",
-    "statusBar.background": "#0A0A0A",
+    "statusBar.border": "#0A0A0A",
+    "statusBar.foreground": "#0A0A0A",
+    "tab.border": "#0A0A0A",
     "editorGroup.border": "#2D2D2D",
-    "tab.activeBorder": "#2D2D2D",
     "editorLineNumber.foreground": "#2D2D2D",
     "activityBar.inactiveForeground": "#2D2D2D",
     "editor.lineHighlightBorder": "#B9B9B9",
@@ -23,12 +24,14 @@
     "activityBarBadge.background": "#B9B9B9",
     "badge.background": "#B9B9B9",
     "titleBar.activeBackground": "#DCDCDC",
-    "tab.inactiveBackground": "#DCDCDC",
+    "list.hoverBackground": "#DCDCDC",
+    "tab.activeBackground": "#DCDCDC",
     "editor.background": "#FFFFFF",
     "editorGroupHeader.tabsBackground": "#FFFFFF",
-    "tab.border": "#FFFFFF",
+    "tab.inactiveBackground": "#FFFFFF",
     "activityBar.background": "#FFFFFF",
-    "sideBar.background": "#FFFFFF"
+    "sideBar.background": "#FFFFFF",
+    "statusBar.background": "#FFFFFF"
   },
   "tokenColors": [
     {

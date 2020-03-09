@@ -2,7 +2,7 @@ const fs = require("fs");
 const { writeFileSync } = fs;
 
 const black = "#0A0A0A";
-const blue = "#040080";
+const blue = "#02004F";
 const white = "#FFFFFF";
 const cream = "#FEFFE8";
 
@@ -47,11 +47,12 @@ const totalJSON = {
       "activityBarBadge.foreground",
       "sideBar.border",
       "activityBar.border",
-      "statusBar.background",
+      "statusBar.border",
+      "statusBar.foreground",
+      "tab.border",
     ],
     [
       "editorGroup.border",
-      "tab.activeBorder",
       "editorLineNumber.foreground",
       "activityBar.inactiveForeground",
     ],
@@ -66,13 +67,18 @@ const totalJSON = {
       "activityBarBadge.background",
       "badge.background",
     ],
-    ["titleBar.activeBackground", "tab.inactiveBackground"],
+    [
+      "titleBar.activeBackground",
+      "list.hoverBackground",
+      "tab.activeBackground",
+    ],
     [
       "editor.background",
       "editorGroupHeader.tabsBackground",
-      "tab.border",
+      "tab.inactiveBackground",
       "activityBar.background",
       "sideBar.background",
+      "statusBar.background",
     ],
   ],
   tokenColors: [
