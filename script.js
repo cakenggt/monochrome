@@ -47,6 +47,7 @@ const totalJSON = {
       "activityBarBadge.foreground",
       "sideBar.border",
       "activityBar.border",
+      "statusBar.background",
     ],
     [
       "editorGroup.border",
@@ -62,7 +63,6 @@ const totalJSON = {
       "editor.lineHighlightBorder",
       "list.inactiveSelectionBackground",
       "list.activeSelectionForeground",
-      "statusBar.background",
       "activityBarBadge.background",
       "badge.background",
     ],
