@@ -8,7 +8,7 @@ const cream = "#FEFFE8";
 
 const HEX_REGEX = /#([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})/;
 
-const generateBlend = (start, stop) => {
+const generateBlend = (start, stop, opacity) => {
   const result = [];
   const startArray = start
     .match(HEX_REGEX)
@@ -26,61 +26,68 @@ const generateBlend = (start, stop) => {
       .map(value => value.toString(16))
       .map(value => (value.length < 2 ? `0${value}` : value))
       .join("");
-    result.push(`#${currentColor.toUpperCase()}`);
+    result.push(`#${currentColor.toUpperCase()}${opacity}`);
   }
   return result;
 };
 
 const totalJSON = {
-  colors: [
-    // foreground to background list
-    [
-      "editor.foreground",
-      "foreground",
-      "tab.activeForeground",
-      "editorLineNumber.activeForeground",
-      "sideBar.foreground",
-      "list.activeSelectionBackground",
-      "list.inactiveSelectionForeground",
-      "activityBar.foreground",
-      "badge.foreground",
-      "activityBarBadge.foreground",
-      "sideBar.border",
-      "activityBar.border",
-      "statusBar.border",
-      "statusBar.foreground",
-      "tab.border",
+  colors: {
+    FF: [
+      // foreground to background list
+      [
+        "editor.foreground",
+        "foreground",
+        "tab.activeForeground",
+        "editorLineNumber.activeForeground",
+        "sideBar.foreground",
+        "list.activeSelectionBackground",
+        "list.inactiveSelectionForeground",
+        "activityBar.foreground",
+        "badge.foreground",
+        "activityBarBadge.foreground",
+        "sideBar.border",
+        "activityBar.border",
+        "statusBar.border",
+        "statusBar.foreground",
+        "tab.border",
+        "editorLightBulb.foreground",
+        "editorLightBulbAutoFix.foreground",
+        "editor.selectionHighlightBorder",
+      ],
+      [
+        "editorGroup.border",
+        "editorLineNumber.foreground",
+        "activityBar.inactiveForeground",
+      ],
+      [],
+      [],
+      [],
+      [
+        "editorLineNumber.activeForeground",
+        "editor.lineHighlightBorder",
+        "list.inactiveSelectionBackground",
+        "list.activeSelectionForeground",
+        "activityBarBadge.background",
+        "badge.background",
+      ],
+      [
+        "titleBar.activeBackground",
+        "list.hoverBackground",
+        "tab.activeBackground",
+      ],
+      [
+        "editor.background",
+        "editorGroupHeader.tabsBackground",
+        "tab.inactiveBackground",
+        "activityBar.background",
+        "sideBar.background",
+        "statusBar.background",
+        "editor.selectionHighlightBackground",
+      ],
     ],
-    [
-      "editorGroup.border",
-      "editorLineNumber.foreground",
-      "activityBar.inactiveForeground",
-    ],
-    [],
-    [],
-    [],
-    [
-      "editorLineNumber.activeForeground",
-      "editor.lineHighlightBorder",
-      "list.inactiveSelectionBackground",
-      "list.activeSelectionForeground",
-      "activityBarBadge.background",
-      "badge.background",
-    ],
-    [
-      "titleBar.activeBackground",
-      "list.hoverBackground",
-      "tab.activeBackground",
-    ],
-    [
-      "editor.background",
-      "editorGroupHeader.tabsBackground",
-      "tab.inactiveBackground",
-      "activityBar.background",
-      "sideBar.background",
-      "statusBar.background",
-    ],
-  ],
+    "2F": [["editor.selectionBackground"]],
+  },
   tokenColors: [
     {
       name: "Regular",
@@ -164,31 +171,29 @@ const totalJSON = {
   ],
 };
 
-const createTheme = (name, type, colors) => {
+const createTheme = (name, type, foregroundColor, backgroundColor) => {
   const theme = Object.assign({}, totalJSON);
   theme.name = name;
   theme.type = type;
-  theme.colors = theme.colors.reduce((acc, selectors, i) => {
-    selectors.forEach(selector => (acc[selector] = colors[i]));
-    return acc;
-  }, {});
+  theme.colors = Object.entries(theme.colors).reduce(
+    (acc, [opacity, selectorsRange]) => {
+      const colors = generateBlend(foregroundColor, backgroundColor, opacity);
+      selectorsRange.forEach((selectors, i) =>
+        selectors.forEach(selector => (acc[selector] = colors[i])),
+      );
+      return acc;
+    },
+    {},
+  );
   return theme;
 };
 
 writeFileSync(
   "./themes/paper.json",
-  JSON.stringify(
-    createTheme("Paper", "light", generateBlend(black, white)),
-    undefined,
-    2,
-  ),
+  JSON.stringify(createTheme("Paper", "light", black, white), undefined, 2),
 );
 
 writeFileSync(
   "./themes/blueprint.json",
-  JSON.stringify(
-    createTheme("Blueprint", "dark", generateBlend(cream, blue)),
-    undefined,
-    2,
-  ),
+  JSON.stringify(createTheme("Blueprint", "dark", cream, blue), undefined, 2),
 );
