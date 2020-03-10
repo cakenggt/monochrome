@@ -86,7 +86,12 @@ const totalJSON = {
         "editor.selectionHighlightBackground",
       ],
     ],
-    "2F": [["editor.selectionBackground"]],
+    "2F": [
+      ["editor.selectionBackground", "editor.findMatchBackground"],
+      [],
+      [],
+      ["editor.findMatchHighlightBackground"],
+    ],
   },
   tokenColors: [
     {

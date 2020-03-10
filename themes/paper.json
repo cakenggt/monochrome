@@ -36,7 +36,9 @@
     "sideBar.background": "#FFFFFFFF",
     "statusBar.background": "#FFFFFFFF",
     "editor.selectionHighlightBackground": "#FFFFFFFF",
-    "editor.selectionBackground": "#0A0A0A2F"
+    "editor.selectionBackground": "#0A0A0A2F",
+    "editor.findMatchBackground": "#0A0A0A2F",
+    "editor.findMatchHighlightBackground": "#7373732F"
   },
   "tokenColors": [
     {
