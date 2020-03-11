@@ -18,6 +18,7 @@
     "editorLightBulb.foreground": "#0A0A0AFF",
     "editorLightBulbAutoFix.foreground": "#0A0A0AFF",
     "editor.selectionHighlightBorder": "#0A0A0AFF",
+    "input.border": "#0A0A0AFF",
     "editorGroup.border": "#2D2D2DFF",
     "editorLineNumber.foreground": "#2D2D2DFF",
     "activityBar.inactiveForeground": "#2D2D2DFF",

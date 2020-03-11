@@ -54,6 +54,7 @@ const totalJSON = {
         "editorLightBulb.foreground",
         "editorLightBulbAutoFix.foreground",
         "editor.selectionHighlightBorder",
+        "input.border",
       ],
       [
         "editorGroup.border",
