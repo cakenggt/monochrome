@@ -75,12 +75,12 @@ const totalJSON = {
       [
         "titleBar.activeBackground",
         "list.hoverBackground",
-        "tab.activeBackground",
+        "tab.inactiveBackground",
       ],
       [
         "editor.background",
         "editorGroupHeader.tabsBackground",
-        "tab.inactiveBackground",
+        "tab.activeBackground",
         "activityBar.background",
         "sideBar.background",
         "statusBar.background",
